@@ -1,0 +1,3 @@
+kaggle_notebook/ckpt_check/
+*.pt
+__pycache__/

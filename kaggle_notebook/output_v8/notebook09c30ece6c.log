@@ -1,0 +1,84 @@
+[{"stream_name":"stderr","time":7.214913085,"data":"/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py:96: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.214991835,"data":"  validate(nb)\n"}
+,{"stream_name":"stderr","time":8.160266769,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.1603013,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.160306018,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.160322776,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.777505556,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.777538367,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.777549185,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.777552374,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":44.441462378,"data":"device: cuda\n"}
+,{"stream_name":"stderr","time":44.587236946,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":44.587273314,"data":"\n"}
+,{"stream_name":"stderr","time":44.587277752,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":78.639317066,"data":"num examples: 500\n"}
+,{"stream_name":"stdout","time":78.63936279,"data":"\u003c|user|\u003e\n"}
+,{"stream_name":"stdout","time":78.639370587,"data":"I need you to edit something for me. This is the text I wrote, \n"}
+,{"stream_name":"stdout","time":78.639383451,"data":"\n"}
+,{"stream_name":"stdout","time":78.639388302,"data":"\"Me and my friends have been waiting for a long time to go back to the movies and catch a movie we been waiting on. Last nite I finely went to go buy tickets and when I got to the movie theater the tickets were sold out, so I was pretty pist. We were all pist. So today we deside if we wanted to go to a game instead, but I dont think we will go to a game now.\"\n"}
+,{"stream_name":"stdout","time":78.639393476,"data":"\n"}
+,{"stream_name":"stdout","time":78.639396678,"data":"\u003c|assistant|\u003e\n"}
+,{"stream_name":"stdout","time":78.639400309,"data":"Here's a revised version of your text with some suggested edits to improve grammar, clarity, and overall flow:\n"}
+,{"stream_name":"stdout","time":78.639404095,"data":"\n"}
+,{"stream_name":"stdout","time":78.639407468,"data":"\"My friends and I have been waiting a long time to return to the movies and see a film we've been eagerly anticipating. Last night, I finally went to buy tickets, but when I arrived at the theater, they were sold out. I was pretty upset, and my friends were too. Today, we discussed the possibility of going to a game instead, but I don't think we'll end up going.\"\n"}
+,{"stream_name":"stdout","time":78.63941152,"data":"\n"}
+,{"stream_name":"stdout","time":78.63941467,"data":"I made the following changes:\n"}
+,{"stream_name":"stdout","time":78.639430305,"data":"\n"}
+,{"stream_name":"stdout","time":78.639433151,"data":"- Changed \"Me and my friends\" to \"My fr\n"}
+,{"stream_name":"stdout","time":78.639435867,"data":"sample tokenized length: 285\n"}
+,{"stream_name":"stdout","time":79.071900055,"data":"torch.Size([127985]) torch.int64\n"}
+,{"stream_name":"stdout","time":79.071952159,"data":"first tokens: [27, 91, 872, 91, 397, 40, 1184, 498, 311, 4499, 2494, 369, 752, 13, 1096, 374, 279, 1467, 358, 6139, 11, 4710, 1, 7823, 323, 847, 4780, 614, 1012, 8580, 369, 264, 1293, 882, 311, 728, 1182, 311, 279, 9508]\n"}
+,{"stream_name":"stdout","time":79.071960109,"data":"\u003c|user|\u003e\n"}
+,{"stream_name":"stdout","time":79.071964701,"data":"I need you to edit something for me. This is the text I wrote, \n"}
+,{"stream_name":"stdout","time":79.071968557,"data":"\n"}
+,{"stream_name":"stdout","time":79.071972749,"data":"\"Me and my friends have been waiting for a long time to go back to the movies and catch a movie we been waiting on. Last nite I finely went to go buy tickets and when I got to the movie theater the tickets were sold out, so I was pretty pist. We were all pist. So today we deside if we wanted to go to a game instead, but\n"}
+,{"stream_name":"stdout","time":79.071977764,"data":"vocab_size: 151643\n"}
+,{"stream_name":"stdout","time":79.085922929,"data":"train tokens: 115186\n"}
+,{"stream_name":"stdout","time":79.08596715,"data":"val tokens: 12799\n"}
+,{"stream_name":"stdout","time":79.142754763,"data":"torch.Size([16, 64]) torch.Size([16, 64])\n"}
+,{"stream_name":"stdout","time":79.142788477,"data":"cuda:0 cuda:0\n"}
+,{"stream_name":"stdout","time":79.76626604,"data":"39.77M parameters\n"}
+,{"stream_name":"stdout","time":83.12371402,"data":"step 0: train loss 12.0991, val loss 12.0921\n"}
+,{"stream_name":"stdout","time":93.658931552,"data":"step 100: train loss 7.4481, val loss 7.5817\n"}
+,{"stream_name":"stdout","time":104.153595397,"data":"step 200: train loss 6.8180, val loss 7.1087\n"}
+,{"stream_name":"stdout","time":114.729440445,"data":"step 300: train loss 6.4994, val loss 6.8123\n"}
+,{"stream_name":"stdout","time":125.385594022,"data":"step 400: train loss 6.3097, val loss 6.6540\n"}
+,{"stream_name":"stdout","time":136.166817261,"data":"step 500: train loss 6.0663, val loss 6.5101\n"}
+,{"stream_name":"stdout","time":147.131108038,"data":"step 600: train loss 5.7996, val loss 6.3665\n"}
+,{"stream_name":"stdout","time":158.179014689,"data":"step 700: train loss 5.5869, val loss 6.2657\n"}
+,{"stream_name":"stdout","time":169.411551906,"data":"step 800: train loss 5.4399, val loss 6.1532\n"}
+,{"stream_name":"stdout","time":180.94043799,"data":"step 900: train loss 5.3197, val loss 6.1435\n"}
+,{"stream_name":"stdout","time":192.579307296,"data":"step 999: train loss 5.1065, val loss 6.0476\n"}
+,{"stream_name":"stdout","time":192.579354176,"data":"final loss: 5.4929633140563965\n"}
+,{"stream_name":"stdout","time":194.075998745,"data":"! I use the number of the well. I'll need to explore that it's a space. You could help you to make your relationship for a new number, where't the average a small a given the first by the input text to get how the task?\n"}
+,{"stream_name":"stdout","time":194.076044489,"data":"\n"}
+,{"stream_name":"stdout","time":194.076051346,"data":"\u003c|user|\u003e\n"}
+,{"stream_name":"stdout","time":194.076057321,"data":"You're an AI assistant that the number of the input text in the bat. How can be a Python function should contain at a Python function to the following well. I am in the response should contain of the function\n"}
+,{"stream_name":"stdout","time":195.25656567,"data":"Prompt: \u003c|user|\u003e\n"}
+,{"stream_name":"stdout","time":195.256628342,"data":"Hallo, wie geht es dir?\n"}
+,{"stream_name":"stdout","time":195.256635736,"data":"Assistant: Your, and analyze to provide a Python function that the sequence of the equation. You are this problem, making also a list of the average function should contain of the 1 feet from the 13.\n"}
+,{"stream_name":"stdout","time":195.256642142,"data":"\n"}
+,{"stream_name":"stdout","time":195.25664613,"data":"\u003c|user|\u003e\n"}
+,{"stream_name":"stdout","time":195.256649785,"data":"To find the `x + the 112 feet of the `start, 2, we need to 182 in the `0 and 3 feet the top 1000 foot `x.5000. \n"}
+,{"stream_name":"stdout","time":195.256653456,"data":"\n"}
+,{"stream_name":"stdout","time":195.256656826,"data":"How` to 31520, 5 and the function should be the bat (3\n"}
+,{"stream_name":"stdout","time":195.256660415,"data":"------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":196.034276275,"data":"Prompt: \u003c|user|\u003e\n"}
+,{"stream_name":"stdout","time":196.034318622,"data":"Erkläre mir kurz, was ein neuronales Netz ist.\n"}
+,{"stream_name":"stdout","time":196.034326443,"data":"Assistant: After and the number of the main key, the average is not a list of a few, and present the world, and I'm as a good the snail is a few of the data, and help this situation together to the data of 3x^20. They are the top to a bit of the input. The answer is not of the sentence. You're given.\n"}
+,{"stream_name":"stdout","time":196.034331383,"data":"\n"}
+,{"stream_name":"stdout","time":196.034334887,"data":"I am, I am time. Here's an essay to the input text with a few of the total more concise and I wanted to make the function to share.\n"}
+,{"stream_name":"stdout","time":196.034338695,"data":"\n"}
+,{"stream_name":"stdout","time":196.034343379,"data":"\u003c|assistant|\u003e\n"}
+,{"stream_name":"stdout","time":196.034347821,"data":"What are a\n"}
+,{"stream_name":"stdout","time":196.034352068,"data":"------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":201.65498893,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":201.655043639,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":201.811584185,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":201.81162743,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":202.419966554,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":202.780673119,"data":"[NbConvertApp] Writing 209574 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":205.20679787,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":206.096869183,"data":"[NbConvertApp] Writing 481265 bytes to __results__.html\n"}
+]

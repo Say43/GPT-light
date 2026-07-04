@@ -1,0 +1,148 @@
+[{"stream_name":"stderr","time":5.427094695,"data":"/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py:96: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":5.42793365,"data":"  validate(nb)\n"}
+,{"stream_name":"stderr","time":6.159836931,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.159865992,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.159869596,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.15987218,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.716392984,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.7164262820000005,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.716429908,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.716444814,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":35.915107212,"data":"device: cuda\n"}
+,{"stream_name":"stdout","time":35.915193115,"data":"GPU count: 2\n"}
+,{"stream_name":"stderr","time":36.195319175,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":36.195358117,"data":"\n"}
+,{"stream_name":"stderr","time":36.195362395,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":71.079763583,"data":"num examples: 8000\n"}
+,{"stream_name":"stdout","time":71.079819713,"data":"\u003c|user|\u003e\n"}
+,{"stream_name":"stdout","time":71.079827568,"data":"I need you to edit something for me. This is the text I wrote, \n"}
+,{"stream_name":"stdout","time":71.07983252,"data":"\n"}
+,{"stream_name":"stdout","time":71.079838383,"data":"\"Me and my friends have been waiting for a long time to go back to the movies and catch a movie we been waiting on. Last nite I finely went to go buy tickets and when I got to the movie theater the tickets were sold out, so I was pretty pist. We were all pist. So today we deside if we wanted to go to a game instead, but I dont think we will go to a game now.\"\n"}
+,{"stream_name":"stdout","time":71.079845125,"data":"\n"}
+,{"stream_name":"stdout","time":71.079850222,"data":"\u003c|assistant|\u003e\n"}
+,{"stream_name":"stdout","time":71.079854789,"data":"Here's a revised version of your text with some suggested edits to improve grammar, clarity, and overall flow:\n"}
+,{"stream_name":"stdout","time":71.079859807,"data":"\n"}
+,{"stream_name":"stdout","time":71.079864538,"data":"\"My friends and I have been waiting a long time to return to the movies and see a film we've been eagerly anticipating. Last night, I finally went to buy tickets, but when I arrived at the theater, they were sold out. I was pretty upset, and my friends were too. Today, we discussed the possibility of going to a game instead, but I don't think we'll end up going.\"\n"}
+,{"stream_name":"stdout","time":71.0798703,"data":"\n"}
+,{"stream_name":"stdout","time":71.079889083,"data":"I made the following changes:\n"}
+,{"stream_name":"stdout","time":71.079892914,"data":"\n"}
+,{"stream_name":"stdout","time":71.079896453,"data":"- Changed \"Me and my friends\" to \"My fr\n"}
+,{"stream_name":"stdout","time":71.079900282,"data":"sample tokenized length: 477\n"}
+,{"stream_name":"stdout","time":79.857076608,"data":"torch.Size([3066026]) torch.int64\n"}
+,{"stream_name":"stdout","time":79.857152119,"data":"first tokens: [27, 91, 872, 91, 397, 40, 1184, 498, 311, 4499, 2494, 369, 752, 13, 1096, 374, 279, 1467, 358, 6139, 11, 4710, 1, 7823, 323, 847, 4780, 614, 1012, 8580, 369, 264, 1293, 882, 311, 728, 1182, 311, 279, 9508]\n"}
+,{"stream_name":"stdout","time":79.857162663,"data":"\u003c|user|\u003e\n"}
+,{"stream_name":"stdout","time":79.857168567,"data":"I need you to edit something for me. This is the text I wrote, \n"}
+,{"stream_name":"stdout","time":79.857173841,"data":"\n"}
+,{"stream_name":"stdout","time":79.857178585,"data":"\"Me and my friends have been waiting for a long time to go back to the movies and catch a movie we been waiting on. Last nite I finely went to go buy tickets and when I got to the movie theater the tickets were sold out, so I was pretty pist. We were all pist. So today we deside if we wanted to go to a game instead, but\n"}
+,{"stream_name":"stdout","time":79.857184059,"data":"vocab_size: 151643\n"}
+,{"stream_name":"stdout","time":79.870209454,"data":"train tokens: 2759423\n"}
+,{"stream_name":"stdout","time":79.870265699,"data":"val tokens: 306603\n"}
+,{"stream_name":"stdout","time":79.917330206,"data":"torch.Size([64, 128]) torch.Size([64, 128])\n"}
+,{"stream_name":"stdout","time":79.917353341,"data":"cuda:0 cuda:0\n"}
+,{"stream_name":"stdout","time":80.615678699,"data":"43.74M parameters\n"}
+,{"stream_name":"stdout","time":80.615714084,"data":"Wrapping model in DataParallel across 2 GPUs\n"}
+,{"stream_name":"stderr","time":82.154441819,"data":"/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":82.15448225,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":82.154488044,"data":"\n"}
+,{"stream_name":"stderr","time":82.154492685,"data":"/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":82.154497959,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stdout","time":124.979641716,"data":"step 0: train loss 170.0178, val loss 170.0528\n"}
+,{"stream_name":"stderr","time":129.39745478,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":129.397494319,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":129.397501085,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":129.397593745,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":129.397637639,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":129.397886022,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":129.398419152,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":129.398437457,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":129.398454459,"data":"Exception encountered at \"In [8]\":\n"}
+,{"stream_name":"stderr","time":129.398459313,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":129.398463563,"data":"OutOfMemoryError                          Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":129.398467449,"data":"/tmp/ipykernel_23/2314861671.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":129.398471633,"data":"      5 \n"}
+,{"stream_name":"stderr","time":129.398475731,"data":"      6     xb, yb = get_batch('train')\n"}
+,{"stream_name":"stderr","time":129.398479704,"data":"----\u003e 7     logits, loss = model(xb, yb)\n"}
+,{"stream_name":"stderr","time":129.398483981,"data":"      8     loss = loss.mean()\n"}
+,{"stream_name":"stderr","time":129.398487895,"data":"      9     optimizer.zero_grad(set_to_none=True)\n"}
+,{"stream_name":"stderr","time":129.398491335,"data":"\n"}
+,{"stream_name":"stderr","time":129.398495216,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py in _wrapped_call_impl(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":129.39849942,"data":"   1774             return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":129.398503204,"data":"   1775         else:\n"}
+,{"stream_name":"stderr","time":129.39850716,"data":"-\u003e 1776             return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":129.398510914,"data":"   1777 \n"}
+,{"stream_name":"stderr","time":129.398513839,"data":"   1778     # torchrec tests the code consistency with the following code\n"}
+,{"stream_name":"stderr","time":129.398517406,"data":"\n"}
+,{"stream_name":"stderr","time":129.398520758,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py in _call_impl(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":129.398524055,"data":"   1785                 or _global_backward_pre_hooks or _global_backward_hooks\n"}
+,{"stream_name":"stderr","time":129.398527202,"data":"   1786                 or _global_forward_hooks or _global_forward_pre_hooks):\n"}
+,{"stream_name":"stderr","time":129.398530219,"data":"-\u003e 1787             return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":129.398533701,"data":"   1788 \n"}
+,{"stream_name":"stderr","time":129.398537906,"data":"   1789         result = None\n"}
+,{"stream_name":"stderr","time":129.398541577,"data":"\n"}
+,{"stream_name":"stderr","time":129.398545011,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/parallel/data_parallel.py in forward(self, *inputs, **kwargs)\n"}
+,{"stream_name":"stderr","time":129.398548714,"data":"    196             replicas = self.replicate(self.module, self.device_ids[: len(inputs)])\n"}
+,{"stream_name":"stderr","time":129.398552686,"data":"    197             outputs = self.parallel_apply(replicas, inputs, module_kwargs)\n"}
+,{"stream_name":"stderr","time":129.398556831,"data":"--\u003e 198             return self.gather(outputs, self.output_device)\n"}
+,{"stream_name":"stderr","time":129.398560841,"data":"    199 \n"}
+,{"stream_name":"stderr","time":129.398564125,"data":"    200     def replicate(self, module: T, device_ids: Sequence[int | torch.device]) -\u003e list[T]:\n"}
+,{"stream_name":"stderr","time":129.398568191,"data":"\n"}
+,{"stream_name":"stderr","time":129.398571884,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/parallel/data_parallel.py in gather(self, outputs, output_device)\n"}
+,{"stream_name":"stderr","time":129.398575776,"data":"    217 \n"}
+,{"stream_name":"stderr","time":129.398585072,"data":"    218     def gather(self, outputs: Any, output_device: int | torch.device) -\u003e Any:\n"}
+,{"stream_name":"stderr","time":129.398589724,"data":"--\u003e 219         return gather(outputs, output_device, dim=self.dim)\n"}
+,{"stream_name":"stderr","time":129.398593823,"data":"    220 \n"}
+,{"stream_name":"stderr","time":129.398597421,"data":"    221 \n"}
+,{"stream_name":"stderr","time":129.398600731,"data":"\n"}
+,{"stream_name":"stderr","time":129.398604821,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/parallel/scatter_gather.py in gather(outputs, target_device, dim)\n"}
+,{"stream_name":"stderr","time":129.39860841,"data":"    149     # Setting the function to None clears the refcycle.\n"}
+,{"stream_name":"stderr","time":129.398611877,"data":"    150     try:\n"}
+,{"stream_name":"stderr","time":129.398615185,"data":"--\u003e 151         res = gather_map(outputs)\n"}
+,{"stream_name":"stderr","time":129.398618611,"data":"    152     finally:\n"}
+,{"stream_name":"stderr","time":129.398621829,"data":"    153         gather_map = None  # type: ignore[assignment]\n"}
+,{"stream_name":"stderr","time":129.398625227,"data":"\n"}
+,{"stream_name":"stderr","time":129.398628886,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/parallel/scatter_gather.py in gather_map(outputs)\n"}
+,{"stream_name":"stderr","time":129.398632999,"data":"    144             return type(out)._make(map(gather_map, zip(*outputs, strict=True)))\n"}
+,{"stream_name":"stderr","time":129.398637415,"data":"    145         # pyrefly: ignore [no-matching-overload]\n"}
+,{"stream_name":"stderr","time":129.398641635,"data":"--\u003e 146         return type(out)(map(gather_map, zip(*outputs, strict=True)))\n"}
+,{"stream_name":"stderr","time":129.39864588,"data":"    147 \n"}
+,{"stream_name":"stderr","time":129.398649606,"data":"    148     # Recursive function calls like this create reference cycles.\n"}
+,{"stream_name":"stderr","time":129.398653176,"data":"\n"}
+,{"stream_name":"stderr","time":129.398656186,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/parallel/scatter_gather.py in gather_map(outputs)\n"}
+,{"stream_name":"stderr","time":129.398660087,"data":"    132         out = outputs[0]\n"}
+,{"stream_name":"stderr","time":129.398663793,"data":"    133         if isinstance(out, torch.Tensor):\n"}
+,{"stream_name":"stderr","time":129.398667471,"data":"--\u003e 134             return Gather.apply(target_device, dim, *outputs)\n"}
+,{"stream_name":"stderr","time":129.398671419,"data":"    135         if out is None:\n"}
+,{"stream_name":"stderr","time":129.398675123,"data":"    136             return None\n"}
+,{"stream_name":"stderr","time":129.398678449,"data":"\n"}
+,{"stream_name":"stderr","time":129.398682003,"data":"/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py in apply(cls, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":129.398685659,"data":"    581             # See NOTE: [functorch vjp and autograd interaction]\n"}
+,{"stream_name":"stderr","time":129.398689631,"data":"    582             args = _functorch.utils.unwrap_dead_wrappers(args)\n"}
+,{"stream_name":"stderr","time":129.398693669,"data":"--\u003e 583             return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":129.398696765,"data":"    584 \n"}
+,{"stream_name":"stderr","time":129.398700078,"data":"    585         if not is_setup_ctx_defined:\n"}
+,{"stream_name":"stderr","time":129.398704023,"data":"\n"}
+,{"stream_name":"stderr","time":129.398707241,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/parallel/_functions.py in forward(ctx, target_device, dim, *inputs)\n"}
+,{"stream_name":"stderr","time":129.398715393,"data":"     78             ctx.unsqueezed_scalar = False\n"}
+,{"stream_name":"stderr","time":129.398719579,"data":"     79         ctx.input_sizes = tuple(i.size(ctx.dim) for i in inputs)\n"}
+,{"stream_name":"stderr","time":129.398724131,"data":"---\u003e 80         return comm.gather(inputs, ctx.dim, ctx.target_device)\n"}
+,{"stream_name":"stderr","time":129.398728351,"data":"     81 \n"}
+,{"stream_name":"stderr","time":129.398732346,"data":"     82     @staticmethod\n"}
+,{"stream_name":"stderr","time":129.398736041,"data":"\n"}
+,{"stream_name":"stderr","time":129.398739514,"data":"/usr/local/lib/python3.12/dist-packages/torch/nn/parallel/comm.py in gather(tensors, dim, destination, out)\n"}
+,{"stream_name":"stderr","time":129.398743227,"data":"    253             )\n"}
+,{"stream_name":"stderr","time":129.398746811,"data":"    254         destination = _get_device_index(destination, allow_cpu=True, optional=True)\n"}
+,{"stream_name":"stderr","time":129.398750644,"data":"--\u003e 255         return torch._C._gather(tensors, dim, destination)\n"}
+,{"stream_name":"stderr","time":129.398754901,"data":"    256     else:\n"}
+,{"stream_name":"stderr","time":129.398760905,"data":"    257         if destination is not None:\n"}
+,{"stream_name":"stderr","time":129.398764328,"data":"\n"}
+,{"stream_name":"stderr","time":129.398768433,"data":"OutOfMemoryError: CUDA out of memory. Tried to allocate 4.63 GiB. GPU 0 has a total capacity of 14.56 GiB of which 98.81 MiB is free. Including non-PyTorch memory, this process has 14.46 GiB memory in use. Of the allocated memory 10.54 GiB is allocated by PyTorch, and 3.73 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n"}
+,{"stream_name":"stderr","time":129.398776961,"data":"\n"}
+,{"stream_name":"stderr","time":131.611436155,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":131.611475138,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":131.750258033,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":131.750287976,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":132.375937399,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":132.710137147,"data":"[NbConvertApp] Writing 224570 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":134.979506908,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":135.808339774,"data":"[NbConvertApp] Writing 498259 bytes to __results__.html\n"}
+]
