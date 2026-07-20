@@ -1,0 +1,121 @@
+[{"stream_name":"stderr","time":7.069779008,"data":"/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py:96: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.069858643,"data":"  validate(nb)\n"}
+,{"stream_name":"stderr","time":7.966303497,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.966333301,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.966346244,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.966350347,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.570551047,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.570595503,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.570601563,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.570605606,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":33.933995744,"data":"device: cuda\n"}
+,{"stream_name":"stdout","time":33.934033347,"data":"GPU count: 2\n"}
+,{"stream_name":"stdout","time":34.510872061,"data":"Using pretokenized data from /kaggle/input/gpt-light-fineweb-edu-16k-1b\n"}
+,{"stream_name":"stdout","time":34.510907553,"data":"meta: {'vocab_size': 16000, 'train_tokens': 990001088, 'val_tokens': 10000011, 'dtype': 'uint16', 'source': 'HuggingFaceFW/fineweb-edu sample-10BT (skip first 225k docs, fresh tokens)'}\n"}
+,{"stream_name":"stdout","time":34.510913169,"data":"train tokens: 990001088\n"}
+,{"stream_name":"stdout","time":34.510916919,"data":"val tokens: 10000011\n"}
+,{"stream_name":"stdout","time":34.510920707,"data":"vocab_size: 16000\n"}
+,{"stream_name":"stdout","time":34.510924048,"data":"And you ain't seen nothing yet!\n"}
+,{"stream_name":"stdout","time":34.510927559,"data":"What began at Stanford University a half century ago as a way to merge art, science, and business, has turned into one of the most well-recognized methodologies for innovation.\n"}
+,{"stream_name":"stdout","time":34.510931584,"data":"Design thinking is practical, human-centered, and prototype-driven. It helps teams of diverse people tackle fuzzy, ill-defined challenges in creative ways. These challenges can come in many shapes and sizes, for example, the\n"}
+,{"stream_name":"stdout","time":34.511748999,"data":"bpb factor: 0.3381 (4.27 bytes/token on val sample)\n"}
+,{"stream_name":"stdout","time":34.691860211,"data":"torch.Size([48, 512]) torch.Size([48, 512])\n"}
+,{"stream_name":"stdout","time":34.691913206,"data":"cuda:0 cuda:0\n"}
+,{"stream_name":"stdout","time":36.477584254,"data":"97.24M parameters\n"}
+,{"stream_name":"stdout","time":36.477625478,"data":"Found checkpoint at /kaggle/input/gpt-light-checkpoint-v23/checkpoint.pt, attempting resume...\n"}
+,{"stream_name":"stdout","time":40.969706593,"data":"Resumed from iter 13999 (phase=sft), continuing pretrain at 14000, sft at 3401\n"}
+,{"stream_name":"stdout","time":40.969761413,"data":"QK-norm: enabled\n"}
+,{"stream_name":"stdout","time":40.96977001,"data":"Wrapping model in DataParallel across 2 GPUs\n"}
+,{"stream_name":"stdout","time":40.969805707,"data":"Muon params: 84.93M, AdamW params: 12.31M\n"}
+,{"stream_name":"stderr","time":42.789537676,"data":"/tmp/ipykernel_22/1692917021.py:295: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":42.789576187,"data":"  scaler = torch.cuda.amp.GradScaler(enabled=(device == 'cuda'))\n"}
+,{"stream_name":"stderr","time":42.789581188,"data":"\n"}
+,{"stream_name":"stderr","time":42.789584487,"data":"/tmp/ipykernel_22/1692917021.py:295: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":42.789588187,"data":"  scaler = torch.cuda.amp.GradScaler(enabled=(device == 'cuda'))\n"}
+,{"stream_name":"stderr","time":45.757415762,"data":"W0719 07:51:10.547000 22 torch/_logging/_internal.py:1204] [0/0] Profiler function \u003cclass 'torch.autograd.profiler.record_function'\u003e will be ignored\n"}
+,{"stream_name":"stderr","time":45.75744477,"data":"\n"}
+,{"stream_name":"stderr","time":45.757450535,"data":"W0719 07:51:10.547000 22 torch/_logging/_internal.py:1204] [0/0] Profiler function \u003cclass 'torch.autograd.profiler.record_function'\u003e will be ignored\n"}
+,{"stream_name":"stderr","time":48.89446535,"data":"/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1946: UserWarning: Dynamo does not know how to trace the builtin `_thread.get_ident.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).\n"}
+,{"stream_name":"stderr","time":48.894500332,"data":"If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.\n"}
+,{"stream_name":"stderr","time":48.894536619,"data":"If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.\n"}
+,{"stream_name":"stderr","time":48.894543703,"data":"  torch._dynamo.utils.warn_once(explanation + \"\\n\" + \"\\n\".join(hints))\n"}
+,{"stream_name":"stderr","time":48.894548575,"data":"\n"}
+,{"stream_name":"stderr","time":48.894552893,"data":"/usr/local/lib/python3.12/dist-packages/torch/_dynamo/variables/functions.py:1946: UserWarning: Dynamo does not know how to trace the builtin `_thread.get_ident.` This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind).\n"}
+,{"stream_name":"stderr","time":48.89455815,"data":"If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround.\n"}
+,{"stream_name":"stderr","time":48.894562944,"data":"If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use `torch.compiler.allow_in_graph`.\n"}
+,{"stream_name":"stderr","time":48.894567992,"data":"  torch._dynamo.utils.warn_once(explanation + \"\\n\" + \"\\n\".join(hints))\n"}
+,{"stream_name":"stderr","time":49.78863259,"data":"/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":49.788673625,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":49.788680772,"data":"\n"}
+,{"stream_name":"stderr","time":49.788704838,"data":"/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":49.788710441,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stdout","time":50.24786994,"data":"warmup ok: batch_size=48, grad_accum=4, 4.7s (includes one-time compile)\n"}
+,{"stream_name":"stdout","time":50.267009567,"data":"start_iter (14000) \u003e= max_iters (14000), nothing left to train this run.\n"}
+,{"stream_name":"stdout","time":50.298221382,"data":"Using SFT data from /kaggle/input/gpt-light-sft-smoltalk\n"}
+,{"stream_name":"stdout","time":50.298241512,"data":"SFT meta: {'vocab_size': 16000, 'train_tokens': 148501307, 'val_tokens': 1500014, 'dtype': 'uint16', 'mask_dtype': 'uint8', 'assistant_token_fraction': 0.7320402864985436, 'source': 'HuggingFaceTB/smol-smoltalk (SFT, assistant-turn loss mask)'}\n"}
+,{"stream_name":"stdout","time":50.298247178,"data":"SFT train tokens: 148501307\n"}
+,{"stream_name":"stdout","time":50.298251111,"data":"SFT val tokens: 1500014\n"}
+,{"stream_name":"stderr","time":53.286260245,"data":"W0719 07:51:18.071000 22 torch/_dynamo/convert_frame.py:1676] [3/8] torch._dynamo hit config.recompile_limit (8)\n"}
+,{"stream_name":"stderr","time":53.286300069,"data":"W0719 07:51:18.071000 22 torch/_dynamo/convert_frame.py:1676] [3/8]    function: 'torch_dynamo_resume_in___init___at_913' (/usr/lib/python3.12/threading.py:913)\n"}
+,{"stream_name":"stderr","time":53.286306534,"data":"W0719 07:51:18.071000 22 torch/_dynamo/convert_frame.py:1676] [3/8]    last reason: 3/7: ___stack0 == 'Thread-12'                                 # name += f\" ({target_name})\"  # lib/python3.12/threading.py:917 in torch_dynamo_resume_in___init___at_913\n"}
+,{"stream_name":"stderr","time":53.286311606,"data":"W0719 07:51:18.071000 22 torch/_dynamo/convert_frame.py:1676] [3/8] To log all recompilation reasons, use TORCH_LOGS=\"recompiles\".\n"}
+,{"stream_name":"stderr","time":53.2863157,"data":"W0719 07:51:18.071000 22 torch/_dynamo/convert_frame.py:1676] [3/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/compile/programming_model.recompilation.html\n"}
+,{"stream_name":"stderr","time":53.28631924,"data":"\n"}
+,{"stream_name":"stderr","time":53.286322205,"data":"W0719 07:51:18.071000 22 torch/_dynamo/convert_frame.py:1676] [3/8] torch._dynamo hit config.recompile_limit (8)\n"}
+,{"stream_name":"stderr","time":53.286325606,"data":"W0719 07:51:18.071000 22 torch/_dynamo/convert_frame.py:1676] [3/8]    function: 'torch_dynamo_resume_in___init___at_913' (/usr/lib/python3.12/threading.py:913)\n"}
+,{"stream_name":"stderr","time":53.286329273,"data":"W0719 07:51:18.071000 22 torch/_dynamo/convert_frame.py:1676] [3/8]    last reason: 3/7: ___stack0 == 'Thread-12'                                 # name += f\" ({target_name})\"  # lib/python3.12/threading.py:917 in torch_dynamo_resume_in___init___at_913\n"}
+,{"stream_name":"stderr","time":53.286333216,"data":"W0719 07:51:18.071000 22 torch/_dynamo/convert_frame.py:1676] [3/8] To log all recompilation reasons, use TORCH_LOGS=\"recompiles\".\n"}
+,{"stream_name":"stderr","time":53.286337603,"data":"W0719 07:51:18.071000 22 torch/_dynamo/convert_frame.py:1676] [3/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/compile/programming_model.recompilation.html\n"}
+,{"stream_name":"stderr","time":952.421447036,"data":"/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":952.421505237,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":952.421523931,"data":"\n"}
+,{"stream_name":"stderr","time":952.42152676,"data":"/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":952.421529454,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stdout","time":972.539426447,"data":"sft step 3600: train loss 1.6117, val loss 1.6730, lr 1.42e-05, 21,217 tok/s\n"}
+,{"stream_name":"stdout","time":1917.246633713,"data":"sft step 3800: train loss 1.5953, val loss 1.6582, lr 1.22e-05, 20,812 tok/s\n"}
+,{"stream_name":"stdout","time":2862.458192171,"data":"sft step 4000: train loss 1.5930, val loss 1.6634, lr 1.01e-05, 20,800 tok/s\n"}
+,{"stream_name":"stdout","time":3809.171271051,"data":"sft step 4200: train loss 1.5944, val loss 1.6423, lr 8.07e-06, 20,768 tok/s\n"}
+,{"stream_name":"stdout","time":4755.861481228,"data":"sft step 4400: train loss 1.5940, val loss 1.6518, lr 6.02e-06, 20,768 tok/s\n"}
+,{"stream_name":"stdout","time":5234.926170462,"data":"sft step 4499: train loss 1.5879, val loss 1.6696, lr 5.01e-06, 20,315 tok/s\n"}
+,{"stream_name":"stdout","time":5241.047993532,"data":"final SFT loss: 1.6542160511016846\n"}
+,{"stream_name":"stdout","time":5245.13691536,"data":"\u003c|endoftext|\u003e\n"}
+,{"stream_name":"stdout","time":5245.136980919,"data":"Title: The Problem of Selling Employees Throughout Our Relationship | Streamline Your Search\n"}
+,{"stream_name":"stdout","time":5245.136991056,"data":"In this story, Employees at the Marquise Pavilion, a co-working location in the city, have been forced to give up their leave as friends, leaving behind a toxic work environment that left them feeling threatened and desperate. This experience has left them vulnerable, unable to escape, and left them with a deep-seated fear of\n"}
+,{"stream_name":"stdout","time":5246.578829922,"data":"Prompt: The history of the Roman Empire begins with\n"}
+,{"stream_name":"stdout","time":5246.578872835,"data":"Completion: the rise of the Roman Republic in the 4th century BCE. The Roman Empire was founded by Emperor Augustus in 427 CE, and the Empire was founded in 427 CE by Emperor Augustus.\n"}
+,{"stream_name":"stdout","time":5246.578879848,"data":"\n"}
+,{"stream_name":"stdout","time":5246.578884351,"data":"However, Rome was not just a Roman state; it was also a state. In 476 BCE, the Emperor Justus was born, and the Empire was created by Emperor Augustus\n"}
+,{"stream_name":"stdout","time":5246.578889297,"data":"------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":5247.779472665,"data":"Prompt: Photosynthesis is the process by which plants\n"}
+,{"stream_name":"stdout","time":5247.779517363,"data":"Completion: convert sunlight energy into chemical energy. It's the process by which plants absorb light and convert carbon dioxide into oxygen.\n"}
+,{"stream_name":"stdout","time":5247.779525074,"data":"\n"}
+,{"stream_name":"stdout","time":5247.779529662,"data":"Photosynthesis is a vital process in the Earth's ecosystems, and it's a complex process that involves the use of photosynthesis. The process involves the following steps:\n"}
+,{"stream_name":"stdout","time":5247.779534312,"data":"\n"}
+,{"stream_name":"stdout","time":5247.779538634,"data":"1. Water is used to produce oxygen, which is a common source of carbon.\n"}
+,{"stream_name":"stdout","time":5247.779543104,"data":"2.\n"}
+,{"stream_name":"stdout","time":5247.779547305,"data":"------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":5248.939799951,"data":"Prompt: In machine learning, a neural network is\n"}
+,{"stream_name":"stdout","time":5248.939840744,"data":"Completion: a continuous, dynamic structure that continuously updates and de-searches the data from its nodes to the next node. The nodes perform a wide range of tasks, from predicting the height of a curve to performing computations on a sequence of parameters.\n"}
+,{"stream_name":"stdout","time":5248.93984755,"data":"\n"}
+,{"stream_name":"stdout","time":5248.939851338,"data":"In machine learning, algorithms are used to understand the behavior of the data in a given space. For example, the algorithm can learn new responses\n"}
+,{"stream_name":"stdout","time":5248.939855352,"data":"------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":5249.90316361,"data":"Prompt: The largest planet in our solar system is\n"}
+,{"stream_name":"stdout","time":5249.90319852,"data":"Completion: Europa, with a surface area of approximately 3.5 million square kilometers. The surface area of Europa is approximately 15.4% that of Earth.\n"}
+,{"stream_name":"stdout","time":5249.903344248,"data":"\n"}
+,{"stream_name":"stdout","time":5249.903351445,"data":"\u003c|endoftext|\u003e\n"}
+,{"stream_name":"stdout","time":5249.903355948,"data":"The story begins when someone in the town of Coventura takes a short break to relax and recharge after a long day of relaxation. The group is already feeling relaxed, and they're finally able\n"}
+,{"stream_name":"stdout","time":5249.903360027,"data":"------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":5249.950901063,"data":"/tmp/ipykernel_22/3587109276.py:95: DeprecationWarning: on_submit is deprecated. Instead, set the .continuous_update attribute to False and observe the value changing with: mywidget.observe(callback, 'value').\n"}
+,{"stream_name":"stderr","time":5249.95092516,"data":"  _txt.on_submit(_on_send)  # Enter key (deprecated in newer ipywidgets, harmless)\n"}
+,{"stream_name":"stderr","time":5249.950930575,"data":"\n"}
+,{"stream_name":"stderr","time":5249.950934997,"data":"/tmp/ipykernel_22/3587109276.py:95: DeprecationWarning: on_submit is deprecated. Instead, set the .continuous_update attribute to False and observe the value changing with: mywidget.observe(callback, 'value').\n"}
+,{"stream_name":"stderr","time":5249.950939715,"data":"  _txt.on_submit(_on_send)  # Enter key (deprecated in newer ipywidgets, harmless)\n"}
+,{"stream_name":"stderr","time":5255.293173727,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":5255.293214703,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":5255.450132214,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":5255.450152708,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":5256.047630769,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":5256.347437929,"data":"[NbConvertApp] Writing 79506 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":5258.634205593,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":5259.554244484,"data":"[NbConvertApp] Writing 465826 bytes to __results__.html\n"}
+]

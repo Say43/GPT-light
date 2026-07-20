@@ -1,7 +1,7 @@
 {
   "id": "says43/notebook09c30ece6c",
   "title": "notebook09c30ece6c",
-  "code_file": "notebook09c30ece6c.ipynb",
+  "code_file": "pretrain_sft.ipynb",
   "language": "python",
   "kernel_type": "notebook",
   "is_private": true,
@@ -9,10 +9,10 @@
   "enable_tpu": false,
   "enable_internet": true,
   "keywords": [],
-  "dataset_sources": ["says43/gpt-light-fineweb-edu-16k"],
-  "kernel_sources": ["says43/notebook09c30ece6c"],
+  "dataset_sources": ["says43/gpt-light-fineweb-edu-16k-1b", "says43/gpt-light-sft-smoltalk", "says43/gpt-light-checkpoint-v23"],
+  "kernel_sources": [],
   "competition_sources": [],
   "model_sources": [],
   "docker_image_pinning_type": "latest",
-  "machine_shape": ""
+  "machine_shape": "NvidiaTeslaT4"
 }

@@ -1,0 +1,109 @@
+[{"stream_name":"stderr","time":5.07757611,"data":"/usr/local/lib/python3.12/dist-packages/nbformat/__init__.py:96: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":5.077649748,"data":"  validate(nb)\n"}
+,{"stream_name":"stderr","time":5.777605025,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":5.777656692,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":5.777664021,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":5.777668146,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.308099135,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.308129889,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.308135637,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.308139392,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":26.951668595,"data":"device: cuda\n"}
+,{"stream_name":"stdout","time":26.951740038,"data":"GPU count: 2\n"}
+,{"stream_name":"stdout","time":27.109113086,"data":"Using pretokenized data from /kaggle/input/gpt-light-fineweb-edu-16k-1b\n"}
+,{"stream_name":"stdout","time":27.109148264,"data":"meta: {'vocab_size': 16000, 'train_tokens': 990001088, 'val_tokens': 10000011, 'dtype': 'uint16', 'source': 'HuggingFaceFW/fineweb-edu sample-10BT (skip first 225k docs, fresh tokens)'}\n"}
+,{"stream_name":"stdout","time":27.109153786,"data":"train tokens: 990001088\n"}
+,{"stream_name":"stdout","time":27.109157581,"data":"val tokens: 10000011\n"}
+,{"stream_name":"stdout","time":27.109161219,"data":"vocab_size: 16000\n"}
+,{"stream_name":"stdout","time":27.109164809,"data":"And you ain't seen nothing yet!\n"}
+,{"stream_name":"stdout","time":27.109168444,"data":"What began at Stanford University a half century ago as a way to merge art, science, and business, has turned into one of the most well-recognized methodologies for innovation.\n"}
+,{"stream_name":"stdout","time":27.109172668,"data":"Design thinking is practical, human-centered, and prototype-driven. It helps teams of diverse people tackle fuzzy, ill-defined challenges in creative ways. These challenges can come in many shapes and sizes, for example, the\n"}
+,{"stream_name":"stdout","time":27.257720021,"data":"torch.Size([24, 512]) torch.Size([24, 512])\n"}
+,{"stream_name":"stdout","time":27.257755707,"data":"cuda:0 cuda:0\n"}
+,{"stream_name":"stdout","time":29.038529405,"data":"97.24M parameters\n"}
+,{"stream_name":"stdout","time":29.038564841,"data":"Found checkpoint at /kaggle/input/gpt-light-checkpoint-v15/checkpoint.pt, attempting resume...\n"}
+,{"stream_name":"stdout","time":36.02812868,"data":"Resumed from iter 13999 (phase=pretrain), continuing pretrain at 14000, sft at 0\n"}
+,{"stream_name":"stdout","time":36.028162078,"data":"Wrapping model in DataParallel across 2 GPUs\n"}
+,{"stream_name":"stderr","time":37.514746164,"data":"/tmp/ipykernel_22/4210486070.py:185: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":37.514788873,"data":"  scaler = torch.cuda.amp.GradScaler(enabled=(device == 'cuda'))\n"}
+,{"stream_name":"stderr","time":37.514797961,"data":"\n"}
+,{"stream_name":"stderr","time":37.514800322,"data":"/tmp/ipykernel_22/4210486070.py:185: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":37.514802813,"data":"  scaler = torch.cuda.amp.GradScaler(enabled=(device == 'cuda'))\n"}
+,{"stream_name":"stdout","time":37.530352301,"data":"start_iter (14000) \u003e= max_iters (14000), nothing left to train this run.\n"}
+,{"stream_name":"stdout","time":37.5591125,"data":"Using SFT data from /kaggle/input/gpt-light-sft-smoltalk\n"}
+,{"stream_name":"stdout","time":37.559144356,"data":"SFT meta: {'vocab_size': 16000, 'train_tokens': 148501307, 'val_tokens': 1500014, 'dtype': 'uint16', 'mask_dtype': 'uint8', 'assistant_token_fraction': 0.7320402864985436, 'source': 'HuggingFaceTB/smol-smoltalk (SFT, assistant-turn loss mask)'}\n"}
+,{"stream_name":"stdout","time":37.559148381,"data":"SFT train tokens: 148501307\n"}
+,{"stream_name":"stdout","time":37.559150897,"data":"SFT val tokens: 1500014\n"}
+,{"stream_name":"stderr","time":39.161028611,"data":"/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":39.161064224,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":39.16106978,"data":"\n"}
+,{"stream_name":"stderr","time":39.161073572,"data":"/usr/local/lib/python3.12/dist-packages/torch/autograd/function.py:583: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":39.161078008,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stdout","time":56.968938526,"data":"sft step 0: train loss 2.7275, val loss 2.7488, lr 5.00e-07, 0 tok/s\n"}
+,{"stream_name":"stdout","time":780.894688366,"data":"sft step 200: train loss 2.0470, val loss 2.0555, lr 4.90e-05, 27,160 tok/s\n"}
+,{"stream_name":"stdout","time":1507.0699122,"data":"sft step 400: train loss 1.9414, val loss 1.9733, lr 4.69e-05, 27,074 tok/s\n"}
+,{"stream_name":"stdout","time":2233.286367744,"data":"sft step 600: train loss 1.8865, val loss 1.8833, lr 4.49e-05, 27,073 tok/s\n"}
+,{"stream_name":"stdout","time":2960.017654138,"data":"sft step 800: train loss 1.8562, val loss 1.8653, lr 4.28e-05, 27,054 tok/s\n"}
+,{"stream_name":"stdout","time":3686.276232105,"data":"sft step 1000: train loss 1.7865, val loss 1.8287, lr 4.08e-05, 27,071 tok/s\n"}
+,{"stream_name":"stdout","time":4412.442873996,"data":"sft step 1200: train loss 1.7910, val loss 1.8257, lr 3.87e-05, 27,075 tok/s\n"}
+,{"stream_name":"stdout","time":5138.479308682,"data":"sft step 1400: train loss 1.7404, val loss 1.7927, lr 3.67e-05, 27,080 tok/s\n"}
+,{"stream_name":"stdout","time":5864.937480035,"data":"sft step 1600: train loss 1.7385, val loss 1.7842, lr 3.47e-05, 27,064 tok/s\n"}
+,{"stream_name":"stdout","time":6591.034690594,"data":"sft step 1800: train loss 1.7092, val loss 1.7724, lr 3.26e-05, 27,078 tok/s\n"}
+,{"stream_name":"stdout","time":7317.432194656,"data":"sft step 2000: train loss 1.7217, val loss 1.7504, lr 3.06e-05, 27,065 tok/s\n"}
+,{"stream_name":"stdout","time":8044.399710861,"data":"sft step 2200: train loss 1.6897, val loss 1.7435, lr 2.85e-05, 27,051 tok/s\n"}
+,{"stream_name":"stdout","time":8771.104040411,"data":"sft step 2400: train loss 1.6862, val loss 1.7215, lr 2.65e-05, 27,050 tok/s\n"}
+,{"stream_name":"stdout","time":9497.950487099,"data":"sft step 2600: train loss 1.6599, val loss 1.7500, lr 2.44e-05, 27,054 tok/s\n"}
+,{"stream_name":"stdout","time":10225.381991774,"data":"sft step 2800: train loss 1.6709, val loss 1.6952, lr 2.24e-05, 27,022 tok/s\n"}
+,{"stream_name":"stdout","time":10952.920972851,"data":"sft step 3000: train loss 1.6762, val loss 1.7206, lr 2.03e-05, 27,024 tok/s\n"}
+,{"stream_name":"stdout","time":11681.317632615,"data":"sft step 3200: train loss 1.6457, val loss 1.7160, lr 1.83e-05, 26,992 tok/s\n"}
+,{"stream_name":"stdout","time":12409.862485214,"data":"sft step 3400: train loss 1.6271, val loss 1.6705, lr 1.63e-05, 26,986 tok/s\n"}
+,{"stream_name":"stdout","time":13137.645322354,"data":"sft step 3600: train loss 1.6144, val loss 1.6849, lr 1.42e-05, 27,015 tok/s\n"}
+,{"stream_name":"stdout","time":13864.679633247,"data":"sft step 3800: train loss 1.6484, val loss 1.6770, lr 1.22e-05, 27,042 tok/s\n"}
+,{"stream_name":"stdout","time":14592.33343198,"data":"sft step 4000: train loss 1.6413, val loss 1.6821, lr 1.01e-05, 27,025 tok/s\n"}
+,{"stream_name":"stdout","time":15319.960690613,"data":"sft step 4200: train loss 1.6299, val loss 1.6953, lr 8.07e-06, 27,015 tok/s\n"}
+,{"stream_name":"stdout","time":16047.738921633,"data":"sft step 4400: train loss 1.6328, val loss 1.6446, lr 6.02e-06, 27,016 tok/s\n"}
+,{"stream_name":"stdout","time":16416.482474664,"data":"sft step 4499: train loss 1.6436, val loss 1.6932, lr 5.01e-06, 26,391 tok/s\n"}
+,{"stream_name":"stdout","time":16421.89735689,"data":"final SFT loss: 1.6826632022857666\n"}
+,{"stream_name":"stdout","time":16428.573317102,"data":"\u003c|endoftext|\u003e\n"}
+,{"stream_name":"stdout","time":16428.573365433,"data":"\n"}
+,{"stream_name":"stdout","time":16428.573374364,"data":"\n"}
+,{"stream_name":"stdout","time":16428.573381064,"data":"You know, in this situation, I'm trying to make it clear that the business idea \"Analyze's ability to work effectively with marketing teams and target new customers\" would provide a clear vision for the business model.\n"}
+,{"stream_name":"stdout","time":16428.573390287,"data":"\n"}
+,{"stream_name":"stdout","time":16428.573395977,"data":"\u003c|assistant|\u003e\n"}
+,{"stream_name":"stdout","time":16428.573402144,"data":"It's great that you're taking a step back and reflecting on your ideas. I'd love to hear from you about any of the potential benefits or drawbacks of the business model.\n"}
+,{"stream_name":"stdout","time":16428.573409128,"data":"\n"}
+,{"stream_name":"stdout","time":16428.573414877,"data":"Firstly, I'd love to know\n"}
+,{"stream_name":"stdout","time":16429.882138022,"data":"Prompt: The history of the Roman Empire begins with\n"}
+,{"stream_name":"stdout","time":16429.882175263,"data":"Completion: the conquest of the Piazza Romana, which was a long and arduous journey from the north to the south of the Roman Empire. The Romans, under the rule of the Emperor Augustus, were driven by a desire to conquer the Pax Romana, which was a key part of their empire's history. They were met with resistance from the Roman authorities, and\n"}
+,{"stream_name":"stdout","time":16429.88218152,"data":"------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":16431.001079847,"data":"Prompt: Photosynthesis is the process by which plants\n"}
+,{"stream_name":"stdout","time":16431.001113167,"data":"Completion: use sunlight and other chemicals to produce glucose, a type of energy-rich chemical that can be used to power their own body and energy.\n"}
+,{"stream_name":"stdout","time":16431.001117877,"data":"\n"}
+,{"stream_name":"stdout","time":16431.001121052,"data":"\u003c|endoftext|\u003e\n"}
+,{"stream_name":"stdout","time":16431.001124232,"data":"\n"}
+,{"stream_name":"stdout","time":16431.001148079,"data":"In the context of the movie, the movie \"Echo\" is a timeless and relatable villain. It explores the complexities of human nature and the complexities of the human condition. It's not about the character\n"}
+,{"stream_name":"stdout","time":16431.001153381,"data":"------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":16432.020077446,"data":"Prompt: In machine learning, a neural network is\n"}
+,{"stream_name":"stdout","time":16432.020113106,"data":"Completion: a network of interconnected neurons. The network is typically small, such as neurons on the front of the brain, and neurons are on the front of the brain.\n"}
+,{"stream_name":"stdout","time":16432.020117979,"data":"\n"}
+,{"stream_name":"stdout","time":16432.020121682,"data":"The neural network is responsible for generating and interpreting neural signals, including wave patterns, patterns, and even the frequency of certain songs. It is also responsible for understanding the underlying structure of the brain, making predictions and predictions about\n"}
+,{"stream_name":"stdout","time":16432.020126129,"data":"------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":16432.842484851,"data":"Prompt: The largest planet in our solar system is\n"}
+,{"stream_name":"stdout","time":16432.842512222,"data":"Completion: the Sun, with a surface area of approximately 1.9 billion square kilometers and a surface area of roughly 2.7 times the planet's size.\n"}
+,{"stream_name":"stdout","time":16432.842518195,"data":"\n"}
+,{"stream_name":"stdout","time":16432.842522748,"data":"Solar fuel and other essential resources such as solar energy and the sun's energy, have been consumed by the planet for billions of years. However, the planet's energy production has declined over the past few decades, and the planet's energy\n"}
+,{"stream_name":"stdout","time":16432.842533311,"data":"------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":16432.891415537,"data":"/tmp/ipykernel_22/3587109276.py:95: DeprecationWarning: on_submit is deprecated. Instead, set the .continuous_update attribute to False and observe the value changing with: mywidget.observe(callback, 'value').\n"}
+,{"stream_name":"stderr","time":16432.891438943,"data":"  _txt.on_submit(_on_send)  # Enter key (deprecated in newer ipywidgets, harmless)\n"}
+,{"stream_name":"stderr","time":16432.891443331,"data":"\n"}
+,{"stream_name":"stderr","time":16432.891446408,"data":"/tmp/ipykernel_22/3587109276.py:95: DeprecationWarning: on_submit is deprecated. Instead, set the .continuous_update attribute to False and observe the value changing with: mywidget.observe(callback, 'value').\n"}
+,{"stream_name":"stderr","time":16432.891449835,"data":"  _txt.on_submit(_on_send)  # Enter key (deprecated in newer ipywidgets, harmless)\n"}
+,{"stream_name":"stderr","time":16437.677023215,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":16437.677079805,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":16437.816915758,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":16437.81694037,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":16438.387510812,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":16438.691582102,"data":"[NbConvertApp] Writing 66590 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":16440.999196244,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":16441.861155205,"data":"[NbConvertApp] Writing 426869 bytes to __results__.html\n"}
+]

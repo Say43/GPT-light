@@ -1,0 +1,10 @@
+# Training (Kaggle/Colab) and local inference
+torch>=2.5
+numpy
+transformers>=4.40   # only PreTrainedTokenizerFast is used, not any model classes
+
+# Kaggle notebook chat widget (kaggle/pretrain_sft.ipynb only, optional otherwise)
+ipywidgets
+
+# Benchmark suite (chat/eval_benchmarks.py)
+datasets>=2.19

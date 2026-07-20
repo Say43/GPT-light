@@ -1,42 +1,126 @@
 # GPT-light
 
-Training a GPT language model **from scratch** — implemented in plain PyTorch, small enough to pretrain on free-tier cloud GPUs (Google Colab / Kaggle T4), but built like the real thing.
+A GPT language model trained **from scratch** in plain PyTorch — no
+`transformers` model classes, only the tokenizer is reused. Small enough to
+pretrain end to end on free-tier cloud GPUs (Kaggle's 2x T4 quota), but built
+with the same architectural ingredients modern open models use, not the
+2017 Transformer defaults.
 
-The project started as an extension of the Karpathy GPT learning workflow: instead of stopping at a character-level toy model, it moves step by step toward a realistic small language model — tokenized data, a proper pretraining corpus, and multi-session training on free GPU quotas. It is deliberately not trying to reproduce a production model; the goal is to bridge the gap between a teaching implementation and a real assistant-style training pipeline.
+It started as a follow-on to Karpathy's "let's build GPT" style tutorials:
+instead of stopping at a character-level toy model, it goes step by step
+toward something closer to a real small-model training pipeline —
+tokenized data at scale, a real pretraining corpus, multi-session training
+across weekly GPU quota resets, an optimizer swap validated with an A/B
+comparison, and a standard benchmark suite instead of just eyeballing a few
+completions. It's not trying to compete with production models; the goal was
+to see how much of that pipeline holds up under a hobbyist's compute budget.
 
-## What's inside
+**Results, benchmark numbers, and honest failure notes: see
+[RESULTS.md](RESULTS.md).**
 
-The model is a decoder-only transformer written from first principles (no `transformers` model classes — only the tokenizer is reused):
+## Architecture
 
-- ~124M parameters: 12 layers, 12 heads, 768-dim embeddings, 512-token context
-- RMSNorm, causal self-attention, learned positional embeddings
-- Cosine learning-rate schedule with warmup, gradient accumulation (effective batch of 192 × 512 tokens), AdamW
-- Checkpoint save/resume so training can span multiple free GPU sessions
-- Sampling with temperature and top-k for text-completion tests
+Decoder-only transformer, 97.24M parameters (12 layers, 12 heads, 768-dim
+embeddings, 512-token context):
 
-## Training pipeline (phased)
+- **RoPE** (rotary position embeddings) instead of learned positional
+  embeddings
+- **SwiGLU** feedforward instead of a plain ReLU/GELU MLP
+- **RMSNorm**, pre-norm residual blocks
+- **QK-norm** — normalizing queries/keys before attention, for training
+  stability at higher learning rates
+- Tied input/output embeddings
+- **Muon** optimizer for the 2D hidden weight matrices (attention and
+  feedforward projections), **AdamW** for embeddings and norm gains — a
+  from-scratch reimplementation of the algorithm described in
+  [Jordan et al.](https://kellerjordan.github.io/posts/muon/) (MIT-licensed
+  reference implementation; this is an independent implementation, not
+  copied code)
+- WSD (warmup-stable-decay) learning-rate schedule, so a training run isn't
+  locked into a fixed total step count decided up front — useful when
+  sessions get cut off by GPU-quota limits and you don't know in advance how
+  many more you'll get this week
 
-1. **Phase 1–2** — architecture bring-up and smoke tests on small chat data (`GPT-light-colab.ipynb`)
-2. **Phase 3** — pretraining on a pretokenized [FineWeb-Edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu) corpus, uploaded as a Kaggle dataset so GPU quota isn't wasted on data prep (`kaggle_notebook/`)
-3. **Phase 4 (planned)** — supervised fine-tuning on `smol-smoltalk` to turn the base model into an assistant
+These choices track what recent efficient small-model projects use — most
+directly [Karpathy's nanochat](https://github.com/karpathy/nanochat), which
+was a reference point for several of them (QK-norm, Muon in particular).
+
+## Training pipeline
+
+1. **Prototype** (`notebooks/01_colab_prototype.ipynb`) — architecture
+   bring-up and smoke tests on a small chat dataset in Google Colab.
+2. **Pretraining** — a pretokenized [FineWeb-Edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu)
+   corpus (990M tokens), prepared offline and uploaded as a Kaggle dataset so
+   training sessions don't burn GPU quota on data prep. 14,000 iterations,
+   WSD schedule.
+3. **SFT** — continues from the pretrained checkpoint, fine-tuning on
+   [smol-smoltalk](https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk)
+   conversations in a `<|user|>`/`<|assistant|>` format. Loss is masked to
+   only the assistant turns (`ignore_index=-100` on user tokens) so the model
+   learns to answer, not to ask. 4,500 iterations.
+
+Both phases run in the same notebook (`kaggle/pretrain_sft.ipynb`) and share
+a checkpoint-resume mechanism, since a full run doesn't fit in one Kaggle
+session: model weights, both optimizers' state, the AMP gradient-scaler
+state, and which phase/iteration to resume from are all saved together.
 
 ## Repository layout
 
 ```text
-GPT-light-colab.ipynb        Original Colab training notebook
-kaggle_notebook/
-  notebook09c30ece6c.ipynb   Kaggle training notebook (GPU, checkpoint resume)
-  kernel-metadata.json       Kaggle kernel config (datasets, GPU settings)
-  output_v*/                  Training run logs
+notebooks/01_colab_prototype.ipynb   Early architecture smoke-test (Colab)
+kaggle/
+  pretrain_sft.ipynb                 Main training notebook (pretrain + SFT, checkpoint resume)
+  kernel-metadata.json               Kaggle kernel config (datasets, GPU pinning)
+chat/
+  local_chat.py                      Local CLI chat against a trained checkpoint
+  eval_benchmarks.py                 Standard log-likelihood benchmark suite (ARC/HellaSwag/LAMBADA)
+  tokenizer/                         Tokenizer files (shared by both scripts)
+checkpoints/
+  baseline_v18/                      AdamW-only control run (weights gitignored, see checkpoints/README.md)
+  final_v24/                         Final model: QK-norm + Muon, full pretrain + SFT
+logs/legacy/                         Early OOM-tuning debug logs from architecture bring-up
+RESULTS.md                           Benchmark numbers, A/B comparison, and what went wrong along the way
 ```
 
 ## Running it
 
-On **Kaggle**: push the notebook with the [Kaggle CLI](https://github.com/Kaggle/kaggle-api) (`kaggle kernels push -p kaggle_notebook`), with the pretokenized dataset and checkpoint dataset attached. The notebook resumes from the latest checkpoint automatically.
+**Pretraining/SFT on Kaggle:** push with the
+[Kaggle CLI](https://github.com/Kaggle/kaggle-api):
+`kaggle kernels push -p kaggle`, with the pretokenized dataset attached (and
+a checkpoint dataset attached for resuming — see
+[checkpoints/README.md](checkpoints/README.md)). The notebook resumes
+automatically.
 
-On **Colab**: open `GPT-light-colab.ipynb` and run top to bottom on a GPU runtime.
+**Prototype in Colab:** open `notebooks/01_colab_prototype.ipynb` and run top
+to bottom on a GPU runtime.
 
-## Notes
+**Chat locally:**
+```
+pip install -r requirements.txt
+python chat/local_chat.py
+```
+Loads `checkpoints/final_v24/checkpoint.pt` by default. Each message starts
+a fresh conversation (no multi-turn memory) — at this model size, carrying
+prior turns in context dragged replies off-topic more often than it helped;
+see [RESULTS.md](RESULTS.md) for why.
 
-- The pretrained result is a **base model** (text continuation), not a chat assistant — instruction following arrives with the SFT phase.
-- Batch size and gradient accumulation are tuned to fit a 16 GB T4; the logs in `output_v*` document the OOM experiments that led there.
+**Run the benchmark suite:**
+```
+python chat/eval_benchmarks.py
+```
+Downloads ARC-Easy, ARC-Challenge, HellaSwag, and LAMBADA from Hugging Face
+and scores the checkpoint with the standard log-likelihood method (see
+[RESULTS.md](RESULTS.md) for results and methodology).
+
+## What this is and isn't
+
+- The pretrained-only checkpoint is a **base model** (text continuation),
+  not an assistant — instruction-following comes from the SFT phase.
+- It's a hobbyist / educational project, not a production model. Benchmark
+  scores are below similarly-sized production small models (GPT-2-124M,
+  SmolLM2-135M), because those trained on orders of magnitude more tokens.
+  The architecture itself is arguably more modern than GPT-2's; the gap is
+  purely a compute/data budget difference. Details in
+  [RESULTS.md](RESULTS.md).
+- Batch size, gradient accumulation, and GPU pinning are tuned around a
+  16GB T4; `logs/legacy/` documents the OOM experiments that led there.
