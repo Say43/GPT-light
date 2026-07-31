@@ -22,7 +22,7 @@ tutorials. Those typically stop at a character-level toy model that
 demonstrates the mechanism but not the engineering around it. The goal here
 was to carry the same construction all the way to a realistic small-scale
 training pipeline, and to find out empirically how much of that pipeline
-survives a hobbyist's compute budget:
+survives a low compute budget:
 
 - a tokenized pretraining corpus at scale rather than a single text file,
 - a training run spanning multiple sessions and weekly GPU-quota resets,
