@@ -14,23 +14,6 @@ free GPU quota of a public cloud notebook platform.
 **Results, benchmark numbers, and an honest account of what went wrong:
 see [RESULTS.md](RESULTS.md).**
 
-## What "from scratch" means here
-
-The phrase is used loosely in this field, so to be precise about the scope of
-the work:
-
-| | |
-|---|---|
-| Model architecture | **Written here.** Attention, feedforward blocks, normalization, position encoding, and the optimizer are implemented directly in PyTorch. No `transformers` model classes. |
-| Model weights | **Trained here.** Randomly initialized, then pretrained and fine-tuned from zero knowledge. Nothing is inherited from an existing model. |
-| Training loop, checkpointing, evaluation | **Written here.** Including a from-scratch reimplementation of the benchmark scoring procedure. |
-| Tokenizer | Reused (existing byte-pair-encoding vocabulary). |
-| Training data | Public datasets (FineWeb-Edu, smol-smoltalk). |
-
-This distinguishes the project from the far more common approach of taking an
-existing pretrained model and fine-tuning it: here, the entire chain from
-model definition to trained weights to measured accuracy was built and run
-from the ground up.
 
 ## Motivation
 
