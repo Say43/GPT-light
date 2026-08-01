@@ -127,6 +127,7 @@ checkpoints/
   final_v24/                         Final model: QK-norm + Muon, full pretrain + SFT
 logs/legacy/                         Early OOM-tuning debug logs from architecture bring-up
 RESULTS.md                           Benchmark numbers, controlled comparison, and failure notes
+NOTICE.md                            Third-party data/software attribution and licences
 ```
 
 ## Running it
@@ -176,3 +177,23 @@ top to bottom on a GPU runtime.
   that led to those settings.
 - This is an educational and research-practice project, not a production
   system.
+
+## Attribution
+
+The pretraining corpus,
+[FineWeb-Edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu), is
+released by Hugging Face under the **Open Data Commons Attribution License
+(ODC-By) v1.0** and is subject to
+[Common Crawl's Terms of Use](https://commoncrawl.org/terms-of-use). The
+fine-tuning corpus,
+[smol-smoltalk](https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk),
+is released under the Apache License 2.0.
+
+The tokenizer in this repository is a produced work derived from FineWeb-Edu
+and carries that attribution. No content from either corpus is redistributed
+here, and the model weights are not published (see
+[checkpoints/README.md](checkpoints/README.md)).
+
+Full attribution for all third-party data, algorithms, and software —
+including the evaluation datasets and the Muon reference implementation — is
+in **[NOTICE.md](NOTICE.md)**.
