@@ -1,0 +1,65 @@
+Copyright (c) 2026 Say43. All rights reserved.
+
+This repository is published for reading and review only. It is NOT open
+source, and no licence to use it is granted.
+
+
+NO LICENCE GRANTED
+
+No permission is granted to any person to use, copy, modify, merge, publish,
+distribute, sublicense, or sell any part of this repository, or to create
+derivative works from it, whether for commercial or non-commercial purposes.
+
+All rights in the original content of this repository are reserved by the
+copyright holder. In the absence of an express written grant, no rights arise
+by implication, estoppel, or otherwise.
+
+Without limiting the above, the following in particular require prior written
+permission:
+
+  - copying the source code, notebooks, or configuration into another
+    project, in whole or in part;
+  - redistributing this repository or any part of it, in original or
+    modified form;
+  - using the code or the trained model in any product or service;
+  - using the contents as training data for, or as input to, a machine
+    learning system.
+
+
+WHAT IS PERMITTED WITHOUT PERMISSION
+
+  - Reading and viewing the repository.
+  - Quoting short excerpts for commentary, review, teaching, or reporting,
+    with attribution, to the extent permitted by applicable copyright law.
+  - Any use that mandatory provisions of applicable law permit regardless of
+    the copyright holder's consent.
+
+While this repository is hosted publicly on GitHub, the GitHub Terms of
+Service additionally allow other GitHub users to view it and to fork it
+within GitHub. That permission comes from those Terms and is not extended by
+this file; it does not grant any right to use the contents outside GitHub.
+
+
+THIRD-PARTY COMPONENTS
+
+This file governs only the original content of this repository. It does not
+apply to, alter, or restrict any third-party data, algorithms, or software
+that the project builds on. Those remain under their own licences — notably
+the FineWeb-Edu corpus under the Open Data Commons Attribution Licence
+(ODC-By) v1.0. See NOTICE.md for the full list and the required attribution.
+
+
+PERMISSIONS AND ENQUIRIES
+
+To request permission for any use not allowed above, open an issue at
+https://github.com/Say43/GPT-light.
+
+
+NO WARRANTY
+
+This repository is provided "as is", without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability,
+fitness for a particular purpose, and non-infringement. To the fullest extent
+permitted by applicable law, the copyright holder shall not be liable for any
+claim, damages, or other liability arising from or in connection with the
+repository or its contents.

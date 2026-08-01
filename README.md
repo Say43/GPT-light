@@ -128,6 +128,7 @@ checkpoints/
 logs/legacy/                         Early OOM-tuning debug logs from architecture bring-up
 RESULTS.md                           Benchmark numbers, controlled comparison, and failure notes
 NOTICE.md                            Third-party data/software attribution and licences
+LICENSE                              Copyright terms for this repository (all rights reserved)
 ```
 
 ## Running it
@@ -177,6 +178,18 @@ top to bottom on a GPU runtime.
   that led to those settings.
 - This is an educational and research-practice project, not a production
   system.
+
+## Licence
+
+**This project is not open source.** It is published so that the work can be
+read and reviewed; no licence to use it is granted. Copying the code into
+another project, redistributing it, or using it in a product or service
+requires prior written permission. See [LICENSE](LICENSE) for the full terms,
+and open an issue if you would like permission for something.
+
+This applies to the original content of this repository only. The third-party
+data and software the project builds on keep their own licences, which are
+unaffected — see below.
 
 ## Attribution
 

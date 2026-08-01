@@ -7,7 +7,9 @@ principally the Open Data Commons Attribution Licence, which governs the
 pretraining corpus.
 
 Nothing in this file affects the status of the original code in this
-repository; it concerns only the third-party components listed below.
+repository, which is covered by [LICENSE](LICENSE) (all rights reserved).
+Conversely, that file does not restrict the third-party components listed
+below: those remain under their own licences.
 
 ## 1. Training data
 
