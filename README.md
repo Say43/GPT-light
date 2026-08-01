@@ -4,7 +4,9 @@
 written from first principles in plain PyTorch, not assembled from a
 pre-existing model library, and its weights were trained from random
 initialization on public text data. No pretrained weights are downloaded and
-adapted; the only component reused from elsewhere is the tokenizer.
+adapted, and no off-the-shelf tokenizer is used — the 16,000-token vocabulary
+was trained here as well. Apart from the public text corpora it learned from,
+every component was built from the ground up.
 
 The result is a 97-million-parameter model that writes fluent, grammatical
 English, answers questions in a chat format, and scores clearly above chance
@@ -13,7 +15,6 @@ free GPU quota of a public cloud notebook platform.
 
 **Results, benchmark numbers, and an honest account of what went wrong:
 see [RESULTS.md](RESULTS.md).**
-
 
 ## Motivation
 
@@ -37,9 +38,9 @@ reproduce the method at small scale and report the outcome accurately.
 ## Architecture
 
 Decoder-only transformer, 97.24M parameters: 12 layers, 12 attention heads,
-768-dimensional embeddings, 512-token context window. The component choices
-follow current efficient small-model practice rather than the 2017
-Transformer defaults:
+768-dimensional embeddings, 512-token context window, 16,000-token
+byte-level BPE vocabulary. The component choices follow current efficient
+small-model practice rather than the 2017 Transformer defaults:
 
 - **RoPE** (rotary position embeddings) instead of learned positional
   embeddings
@@ -69,9 +70,9 @@ served as a reference point for QK-norm and Muon in particular.
    bring-up and smoke tests on a small chat dataset in Google Colab.
 2. **Pretraining** — 14,000 iterations on a pretokenized
    [FineWeb-Edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu)
-   corpus (990M tokens). The corpus was tokenized offline and uploaded as a
-   dataset so that training sessions spend GPU time on training rather than
-   on data preparation.
+   corpus (990M tokens). The tokenizer was trained and the corpus encoded
+   offline, then uploaded together as a dataset, so that training sessions
+   spend GPU time on training rather than on data preparation.
 3. **Supervised fine-tuning (SFT)** — 4,500 iterations continuing from the
    pretrained checkpoint, on
    [smol-smoltalk](https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk)
